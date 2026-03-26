@@ -12,14 +12,17 @@ namespace Pablo_Mamani_4__2_
         {
             string nombre;
             string juego;
+            string consola;
 
             Console.WriteLine("Hola usuario");
             Console.Write("¿Cual es su nombre?: ");
             nombre = Console.ReadLine();
             Console.Write("¿Cual es tu juego favorito?: ");
             juego = Console.ReadLine();
+            Console.Write("¿En que consola se juega?");
+            consola = Console.ReadLine();
 
-            Console.WriteLine("Hola " + nombre + " .Tu juego favorito es " + juego + " y se juega en consola");
+            Console.WriteLine("Hola " + nombre + " .Tu juego favorito es " + juego + " y se juega en " + consola);
 
 
         }
