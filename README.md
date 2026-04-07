@@ -5,3 +5,5 @@
 **Curso:** 4to 2da
 
 **Máquina asignada:** 10
+
+// Ejercicios Logicos
