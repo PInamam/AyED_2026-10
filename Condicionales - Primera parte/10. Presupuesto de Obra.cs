@@ -11,33 +11,16 @@ namespace ConsoleApplication2
         static void Main(string[] args)
         {
 
-            Console.Write("Ingrese el primer lado del triangulo: ");
-            double lado1 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Ingrese el presupuesto disponible: ");
+            double presupuesto = Convert.ToDouble(Console.ReadLine());
 
-            Console.Write("Ingrese el segundo lado del triangulo: ");
-            double lado2 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Ingrese el costo de los materiales: ");
+            double costoMateriales = Convert.ToDouble(Console.ReadLine());
 
-            Console.Write("Ingrese el tercer lado del triangulo: ");
-            double lado3 = Convert.ToDouble(Console.ReadLine());
-
-            if (lado1 == lado2)
+            if (costoMateriales > presupuesto)
             {
-                if (lado1 == lado3)
-                {
-                    Console.WriteLine("Equilatero");
-                }
-                else
-                {
-                    Console.WriteLine("Isosceles");
-                }
-            }
-            else if (lado1 == lado3 || lado2 == lado3)
-            {
-                Console.WriteLine("Isosceles");
-            }
-            else
-            {
-                Console.WriteLine("Escaleno");
+                double dineroFaltante = costoMateriales - presupuesto;
+                Console.WriteLine("Falta pedir prestado $" + dineroFaltante + " para los materiales");
             }
 
         }
