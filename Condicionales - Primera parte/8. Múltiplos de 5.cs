@@ -12,7 +12,7 @@ namespace ConsoleApplication1
         {
 
             Console.Write("Ingrese un numero entero: ");
-            int numero = Convert.ToInt32(Console.ReadLine);
+            int numero = Convert.ToInt32(Console.ReadLine());
 
             if (numero % 5 == 0)
             {
