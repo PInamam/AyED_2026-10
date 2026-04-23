@@ -11,21 +11,22 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
 
-            Console.Write("Ingrese el monto de su compra: ");
-            double compra = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Ingrese la nota de un examen: ");
+            double notaExamen = Convert.ToDouble(Console.ReadLine());
 
-            if (compra > 5000)
+            if (notaExamen >= 7)
             {
-                double descuento = (20 * compra / 100);
-                double montoFinal = compra - descuento;
-
-                Console.WriteLine("Descuento: $" + descuento);
-                Console.WriteLine("Total a pagar: $" + montoFinal);
+                Console.WriteLine("Promocionado.");
+            }
+            else if (notaExamen >= 4)
+            {
+                Console.WriteLine("A finales.");
             }
             else
             {
-                Console.WriteLine("Total: $" + compra);
+                Console.WriteLine("Recuperatorio.");
             }
+
         }
     }
 }
