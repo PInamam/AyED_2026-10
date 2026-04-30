@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication2
+namespace ConsoleApplication1
 {
     class Program
     {
@@ -24,20 +24,25 @@ namespace ConsoleApplication2
             int facturasSobrantes = facturasProducidas - facturasVendidas;
             double dineroRecaudado = docenasVendidas * precioDocena;
 
-
-            Console.WriteLine("Facturas sobrantes: " + facturasSobrantes);
-            Console.WriteLine("Dinero total recaudado: $" + dineroRecaudado);
-
-            if (facturasSobrantes > 6)
+            if (facturasVendidas > facturasProducidas)
             {
-                Console.WriteLine("Alerta: Exceso de producción.");
-            }
-            else
+                Console.WriteLine("Error: Mas facturas vendidas que producidas.");
+            } else
             {
-                Console.WriteLine("Producción eficiente.");
+                Console.WriteLine("Dinero total recaudado: $" + dineroRecaudado);
+                Console.WriteLine("Facturas sobrantes: " + facturasSobrantes);
+                if (facturasSobrantes > 6)
+                {
+                    Console.WriteLine("Alerta: Exceso de producción.");
+                }
+                else
+                {
+                    Console.WriteLine("Producción eficiente.");
+                }
             }
-            
 
+           
         }
     }
 }
+
